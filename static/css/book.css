@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Nunito', 'Roboto', sans-serif;
+}
+div.booking-cards {
+    margin: 150px auto 150px 50px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    
+}
+
+div.cards{
+    flex-grow: 1;
+    min-width: 30%;
+    padding: 30px;
+    
+}
+button{
+    display: inline-block;
+    color:whitesmoke;
+    width: auto;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(21, 22, 22);
+    border: none;
+    border-radius: 2px;
+}
+button:hover {
+    transform: scale(1.1);
+  opacity: 0.8;
+  
+}
+
+/* navigation bar*/
+.company-logo {
+    margin-right: auto;
+    width: 10%;
+    height: 10%;
+    cursor: pointer;
+}
+
+header {
+    position: fixed;
+    top:0;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    background: rgb(56,148,194);
+    background: linear-gradient(315deg, rgba(56,148,194,1) 53%, rgba(223,228,255,1) 87%);
+    box-shadow: 5px 10px 18px #888888;
+}
+nav {
+ margin-right: 10%;
+}
+
+header a, li {
+    text-decoration: none;
+}
+.navbar li {
+    padding : 20px;
+    display: inline-block;
+    margin-right: 20px;
+    
+}
+.navbar li a {
+    color: white;
+}
+
+.navbar li:hover {
+    transform: scale(1.1);
+    border-radius: 10px;
+    border: 1px solid white;
+    
+}
+
+footer {
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    
+    background: linear-gradient(315deg, rgba(56,148,194,1) 53%, rgba(223,228,255,1) 87%);
+    box-shadow: 5px 10px 18px #888888;
+}
+ table {
+        
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        border: 1px solid rgb(164, 172, 175);
+        box-shadow: 5px 10px 18px #888888;
+      }
+      
+ th, td {
+        text-align: center;
+        padding: 16px;
+      }
+      
+      \tr:nth-child(even) {
+        background-color: rgb(162, 201, 221);
+      }

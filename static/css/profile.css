@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto:wght@300&display=swap');
+
+* {
+   
+    font-family: 'Nunito', 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+button{
+    display: inline-block;
+    color:whitesmoke;
+    width: auto;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(21, 22, 22);
+    
+    border: none;
+    border-radius: 2px;
+}
+button:hover {
+    transform: scale(1.1);
+  opacity: 0.8;
+  
+}
+
+/* navigation bar*/
+.company-logo {
+    margin-right: auto;
+    width: 20%;
+    height: 20%;
+    cursor: pointer;
+}
+
+header {
+    position: fixed;
+    top:0;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    background: rgb(56,148,194);
+    background: linear-gradient(315deg, rgba(56,148,194,1) 53%, rgba(223,228,255,1) 87%);
+    box-shadow: 5px 10px 18px #888888;
+}
+nav {
+ margin-right: 10%;
+}
+
+header a, li {
+    text-decoration: none;
+}
+.navbar li {
+    padding : 20px;
+    display: inline-block;
+    margin-right: 20px;
+    
+}
+.navbar li a {
+    color: white;
+}
+
+.navbar li:hover {
+    transform: scale(1.1);
+    border-radius: 10px;
+    border: 1px solid white;
+    
+}
+
+
+
+footer {
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    font-size: large;
+    background: rgb(56,148,194);
+    background: linear-gradient(315deg, rgba(56,148,194,1) 53%, rgba(223,228,255,1) 87%);
+    box-shadow: 5px 10px 18px #888888;
+}
+
+
+
+div.profile {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 200px;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 50px;
+}
+.details{
+    margin-top: 150px;
+    text-align: left;
+    width: 30%;
+    box-shadow: 5px 10px 18px #888888;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+table.dashboard {
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.sec1{
+
+    width: 300px;
+    order: 1;
+    box-shadow: 5px 10px 18px #888888;
+}
+.sec2{
+
+    width: 300px;
+    order: 2;
+    box-shadow: 5px 10px 18px #888888;
+}
+.sec3{
+
+    width: 300px;
+    order: 3;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+caption {
+    font: 1em sans-serif;
+    font-weight: bold;
+}
+table {
+
+    border-collapse: collapse;
+    border-spacing: 0;
+  
+    
+  }
+  
+th, td {
+    text-align: center;
+    padding: 16px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #a6bad4;
+  }

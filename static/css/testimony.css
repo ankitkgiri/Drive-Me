@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto:wght@300&display=swap');
+* {
+    font-family: 'Nunito', 'Roboto', sans-serif;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.container {
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0
+  }
+  main {
+    margin-top: 200px;
+    margin-bottom: 150px;
+  }
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .container img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  
+  .container span {
+    font-size: 20px;
+    margin-right: 15px;
+  }
+  
+  @media (max-width: 500px) {
+    .container {
+        text-align: center;
+    }
+    .container img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+  }
+  .company-logo {
+    margin-right: auto;
+    width: 20%;
+    height: 20%;
+    cursor: pointer;
+}
+
+header {
+  position: fixed;
+  top:0;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: large;
+  background: rgb(56,148,194);
+  background: linear-gradient(315deg, rgba(56,148,194,1) 53%, rgba(223,228,255,1) 87%);
+  box-shadow: 5px 10px 18px #888888;
+}
+nav {
+ margin-right: 10%;
+}
+
+header a, li {
+    text-decoration: none;
+}
+.navbar li {
+    padding : 20px;
+    display: inline-block;
+    margin-right: 20px;
+    
+}
+.navbar li a {
+    color: white;
+}
+
+.navbar li:hover {
+    transform: scale(1.1);
+    border-radius: 10px;
+    border: 1px solid white;
+    
+}
+/* footer */
+footer {
+  position: fixed;
+  bottom:0;
+  height: 50px;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: large;
+  font-size: large;
+  border:1px solid black;
+  background: rgb(56,148,194);
+  background: linear-gradient(315deg, rgba(56,148,194,1) 53%, rgba(223,228,255,1) 87%);
+  box-shadow: 5px 10px 18px #888888;
+}

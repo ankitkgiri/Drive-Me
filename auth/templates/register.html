@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=fot, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/regis.css')}}">
+
+    <title>Register</title>
+</head>
+<header>
+    <img src="{{url_for('static', filename='img/logo.png')}}" alt="Company Logo"
+    class="company-logo">
+    <nav class="navbar">
+        <ul>
+            <li class="nav-link"><a href="/about">About</a></li>
+            <li class="nav-link"><a href="/testimony">Testimonies</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="register">
+        <form action="/register" method="POST">
+            <h2>SIGN UP</h2>
+            <div class="regis-div">
+                <label for="name"><b></b></label>
+                <input type="text" name="name" id="name" placeholder="Full Name" class="regis-control" required>
+            </div>
+            <div class="regis-div">
+                <label for="phno"><b></b></label>
+                <input type="tel" name="phno" id="phno" placeholder="Phone number" class="regis-control" required>
+            </div>
+            <div class="regis-div">
+                <label for="email"><b></b></label>
+                <input type="text" placeholder="Email" id="email" name="email" class="regis-control" required>
+            </div>
+            <div class="regis-div">
+                <label for="password"><b> </b></label>
+                <input type="password" placeholder="Password" name="password" id="password" class="regis-control"
+                    required>
+            </div>
+            <br>
+            <input type="submit" value="Submit" class="button">
+            <br>
+            <div class="regis-div">
+                <p> Already have an account? <a href= "/login">Sign In Here</a></p>
+            </div>
+        </form>
+    </div>
+
+</body>
+<footer>
+    <p>footer foo bazinga</p>
+</footer>
+
+</html>

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto:wght@300&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+* {
+    font-family: 'Nunito', 'Roboto', sans-serif;
+}
+
+.button {
+    display: inline-block;
+    color:whitesmoke;
+    width: 324px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(109, 185, 223);
+    box-shadow: 2px 5px 15px #f3eded;
+    border: none;
+    border-radius: 2px;
+  }
+.button:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+    box-shadow: 2px 5px 15px #afaeae;
+  }
+/* navigation bar*/
+.company-logo {
+    margin-right: auto;
+    width: 20%;
+    height: 20%;
+    cursor: pointer;
+}
+
+header {
+    position: fixed;
+    top:0;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    background: rgb(56,148,194);
+    background: linear-gradient(315deg, rgba(56,148,194,1) 53%, rgba(223,228,255,1) 87%);
+    box-shadow: 5px 10px 18px #888888;
+}
+nav {
+ margin-right: 10%;
+}
+
+header a, li {
+    text-decoration: none;
+}
+.navbar li {
+    padding : 20px;
+    display: inline-block;
+    margin-right: 20px;
+    
+}
+.navbar li a {
+    color: white;
+}
+
+.navbar li:hover {
+    transform: scale(1.1);
+    border-radius: 10px;
+    border: 1px solid white;
+    
+}
+
+
+
+
+/* footer */
+footer {
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    font-size: large;
+    background: rgb(56,148,194);
+    background: linear-gradient(315deg, rgba(56,148,194,1) 53%, rgba(223,228,255,1) 87%);
+    box-shadow: 5px 10px 18px #888888;
+}
+.lend{  
+    box-shadow: 5px 10px 18px #888888;
+    padding: 10px;
+    height: 500px;
+    width: 350px;
+    order: 2;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    margin-bottom: auto;
+  
+    text-align: center;
+}
+
+.form-control{
+    display: inline-block;
+    padding:10px;
+    width: 300px;
+    text-align: center;
+}
+select { text-indent: 100px; }
+
+.lend-div{
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+

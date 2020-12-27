@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/book.css')}}">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <img src="{{url_for('static', filename='img/logo.png')}}" alt="Company Logo"
+        class="company-logo">
+        <nav class="navbar">
+            <ul>
+                <li class="nav-link"><a href="/book">Book a Car</a></li>
+                <li class="nav-link"><a href="{{url_for('driveMe.lend')}}">Lend Your Car</a></li>
+                <li class="nav-link"><a href="/profile">Profile</li>
+                <li style="color: rgb(44, 44, 165);"><a href="{{url_for('auth.logout')}}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="booking-cards" >
+        {% for data in cars %}
+        <div class="card">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            Serial No :
+                        </td>
+                        <td>
+                            {{data[0]}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Car :
+                            
+                        </td>
+                        <td>
+                            {{data[1]}}
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            Seater :
+                            
+                        </td>
+                        <td>
+                            {{data[2]}}
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            Mileage :
+                           
+                        </td>
+                        <td>
+                            {{data[3]}}
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            Fuel :
+                            
+                        </td>
+                        <td>
+                            {{data[4]}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Price :
+                           
+                        </td>
+                        <td>
+                            {{data[5]}}
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+                            <form action="/book_button" method="POST">
+                                <button type="submit" value="{{data[0]}}" name="car_id">BOOK</button>
+                            </form>
+                        </td>
+                        
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+        {% endfor %}
+    </div>
+    
+    
+    <footer>
+        <p>footer foo bazinga</p>
+    </footer>
+</body>
+
+</html>

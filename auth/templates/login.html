@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveMe</title>
+    <meta name="Description" content="Book and Lend Your vehicles!">
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/slideshow.css')}}">
+</head>
+
+<body>
+    <header>
+        <img src="{{url_for('static', filename='img/logo.png')}}" alt="Company Logo"
+            class="company-logo">
+        <nav class="navbar">
+            <ul>
+                <li class="nav-link"><a href="/">Login</a></li>
+                <li class="nav-link"><a href="/about">About</a></li>
+                <li class="nav-link"><a href="/testimony">Testimonies</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="login">            
+                <h2>Login</h2>
+                <form action="/" method="POST">
+                    <div class="login-div">
+                        <label  for="phno"></label> 
+                        <input type="tel" name="phno" id="phno" placeholder="Phone Number" class="form-control" required> 
+                    </div>
+                    <div class="login-div">
+                        <label for="password"></label>
+                        <input type="password" name="password" id="password" placeholder="Password" class="form-control" required>
+                    </div>
+                    <div class="login-div">
+                        <input type="submit" value="Submit" class="button">
+                    </div>
+  
+                </form>
+        
+                <p>New user? 
+                    <a href="/register">Sign Up</a>
+                    here
+                </p>
+        
+            
+        </section>
+        <section class="slideshow">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" style="width:100%">
+                  <div class="text">Cars</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="https://images.pexels.com/photos/4024484/pexels-photo-4024484.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" style="width:100%">
+                  <div class="text">Cars</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" style="width:100%">
+                  <div class="text">Cars</div>
+                </div>
+                <div class="dot-style">
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                 </div>
+                
+                </div>
+                <br>
+                
+                
+                
+                <script>
+                var slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {slideIndex = 1}    
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                  setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+                </script>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Sonam Gupta Bewafa Hai. &#169 Ankit</p>
+    </footer>
+</body>
+
+</html>

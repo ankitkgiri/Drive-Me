@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/profile.css')}}">
+    <title>Profile</title>
+</head>
+
+<body>
+
+    <header>
+        <img src="{{url_for('static', filename='img/logo.png')}}"Company Logo"
+        class="company-logo">
+        <nav class="navbar">
+            <ul>
+                <li class="nav-link"><a href="/book">Book a Car</a></li>
+                <li class="nav-link"><a href="{{url_for('driveMe.lend')}}">Lend Your Car</a></li>
+                <li class="nav-link"><a href="/profile">Profile</li>
+                <li style="color: rgb(44, 44, 165);"><a href="{{url_for('auth.logout')}}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="details">
+        
+        <table class = "dashboard">
+            <caption>Dashboard</caption>
+            <tbody>
+                <tr>
+                    <td>
+                        Phno
+                    </td>
+                    <td>
+                        {{user[0][0]}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Name
+                    </td>
+                    <td>
+                        {{user[0][1]}}
+                    </td>
+                </tr>
+                <tr>
+                   <td>
+                    Email Id
+                   </td> 
+                   <td>
+                    {{user[0][2]}}
+                   </td>
+                </tr>
+            </tbody>
+            
+        </table>
+
+    </div>
+    <div class="profile">
+
+        <table class="sec1">
+            <caption>Your Cars</caption>
+            <tr style="background-color:rgb(179, 226, 250) ">
+                <th>SR NO </th>
+                <th>CAR</th>
+                <th>Seater</th>
+                <th>Mileage</th>
+                <th>Fuel</th>
+                <th>Price</th>
+            </tr>
+
+
+            <tbody>
+                {% for data1 in cars %}
+                <tr>
+                    <td>{{data1[0]}}</td>
+                    <td>{{data1[1]}}</td>
+                    <td>{{data1[2]}}</td>
+                    <td>{{data1[3]}}</td>
+                    <td>{{data1[4]}}</td>
+                    <td>{{data1[5]}}</td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+
+        <table class="sec2">
+            <caption>Your lended Cars</caption>
+            <tr style="background-color:rgb(179, 226, 250) ">
+                <th>SR NO </th>
+                <th>CAR</th>
+                <th>Seater</th>
+                <th>Mileage</th>
+                <th>Fuel</th>
+                <th>Price</th>
+                <th>Returned</th>
+            </tr>
+
+
+            <tbody>
+
+                {% for data in lended_cars %}
+                <tr>
+                    <td>{{data[0][0]}}</td>
+                    <td>{{data[0][1]}}</td>
+                    <td>{{data[0][2]}}</td>
+                    <td>{{data[0][3]}}</td>
+                    <td>{{data[0][4]}}</td>
+                    <td>{{data[0][5]}}</td>
+                    <td>
+                        <form action="{{url_for('driveMe.returned_button')}}" method='POST'>
+                            <button type="submit" value="{{data[0][0]}}" name="car_id">RETURN</button>
+                        </form>
+
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+        <table class="sec3">
+            <caption>Your Booked Cars</caption>
+            <tr style="background-color:rgb(179, 226, 250) ">
+                <th>SR NO </th>
+                <th>CAR</th>
+                <th>Seater</th>
+                <th>Mileage</th>
+                <th>Fuel</th>
+                <th>Price</th>
+            </tr>
+
+
+            <tbody>
+                {% for data in borrowed_cars %}
+                <tr>
+                    <td>{{data[0][0]}}</td>
+                    <td>{{data[0][1]}}</td>
+                    <td>{{data[0][2]}}</td>
+                    <td>{{data[0][3]}}</td>
+                    <td>{{data[0][4]}}</td>
+                    <td>{{data[0][5]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+    </div>
+
+    <footer>
+        <p>footer foo bazinga</p>
+    </footer>
+</body>
+
+</html>
