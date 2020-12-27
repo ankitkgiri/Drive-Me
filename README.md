@@ -14,8 +14,9 @@ To Run the app in terminal type the following sequentially.
 git clone https://github.com/ankitkgiri/Drive-Me.git
 pip install virtualenv
 py -3 -m venv venv
-./venv/scripts/activate.bat 
+./venv/Scripts/activate 
 pip install Flask
+pip install passlib
 py app.py
 ```
 Navigate to <http://127.0.0.1:5000/> to access the project.
